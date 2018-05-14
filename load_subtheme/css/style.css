@@ -1,0 +1,14 @@
+#views-exposed-form-dispatch-loads-view .views-exposed-form #edit-title,
+#views-exposed-form-dispatch-loads-view .views-exposed-form #edit-field-broker-load-number-value,
+#views-exposed-form-dispatch-loads-view .views-exposed-form #edit-field-csctatus-value { width: 100px; }
+
+#views-exposed-form-dispatch-loads-view .views-exposed-form #edit-field-customer-target-id-entityreference-filter,
+#views-exposed-form-dispatch-loads-view .views-exposed-form #edit-field-single-carrier-target-id-entityreference-filter,
+#views-exposed-form-dispatch-loads-view .views-exposed-form #edit-uid-entityreference-filter { width: 200px; }
+
+#dashboard_wrap .panel,
+#load-inactive-form .panel { margin-bottom: 0px !important; }
+
+
+
+/*stylesheets[all][] = css/custom.css*/
