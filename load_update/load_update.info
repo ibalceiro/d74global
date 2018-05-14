@@ -1,0 +1,7 @@
+name = Load Update  
+description = Load edition, distance and payment recalculation, events, status update, etc.   
+core = "7.x"
+version = "7.x-0.1"
+project = "4 Global"
+package = "4 Global"
+files[] = load_update.module

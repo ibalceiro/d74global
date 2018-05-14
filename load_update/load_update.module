@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Code for the Form
+ */
+include_once 'load_update.functions.inc';
+include_once 'load_update.form.inc';
+include_once 'load_update.submit.inc';
+include_once 'load_update.validate.inc';
+
+/**
+* Implementation of hook_menu
+*/
+function load_update_menu(){
+  $items = array(); 
+  $items['load/edit/%'] = array(
+    'title' => 'Edition Form (Entity Load)',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('load_update_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('access load_update module'),
+    'type' => MENU_NORMAL_ITEM,    
+  ); 
+  return $items;      
+}
+
+/**
+* Implementation of hook_permission
+*/
+function load_update_permission() {
+  return array('access load_update module' => array(
+    'title' => t('Access the Load Update Form'), 
+    'description' => t('Give access to Administrators, Dispatchers, and Billing department.'),
+  ));
+}
+
+/**
+* Implementation of hook_process_alter
+*/
+function load_update_date_popup_process_alter(&$element, &$form_state, $context) {
+  unset($element['date']['#description']);
+  unset($element['date']['#title']);
+  unset($element['time']['#description']);
+  unset($element['time']['#title']);
+}
